@@ -103,7 +103,7 @@ namespace CalculatorEngineTests
             VERIFY_ARE_EQUAL(IDS_ERR_INPUT_OVERFLOW, m_calcEngine->IsNumberInvalid(longExp, 4 /* Max exp length */, 100, 10 /* Decimal */));
             // Mantissa length is sum of:
             //  - digits before decimal separator, minus leading zeroes
-            //  - digits after decimal separator, including trailing zeroes
+            //  - digits after decimal separator, including leading zeroes
             // Each of these mantissa values should calculate as a length of 5
             vector<wstring> longMantStrs{ L"10000", L"10.000", L"0000012345", L"123.45", L"0.00123", L"0.12345", L"-123.45e678" };
             for (wstring const& str : longMantStrs)
